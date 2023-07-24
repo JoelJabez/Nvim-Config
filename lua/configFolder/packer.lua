@@ -14,7 +14,8 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('tamton-aquib/staline.nvim')
     use('mfussenegger/nvim-jdtls')
-    use 'ThePrimeagen/vim-be-good'
+    use ('ThePrimeagen/vim-be-good')
+    use ('HiPhish/nvim-ts-rainbow2')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
