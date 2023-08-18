@@ -1,12 +1,12 @@
 local lsp = require('lsp-zero').preset({})
 local cmp = require('cmp')
-local cmp_select = {behavior = cmp.SelectBehavior.Select}
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
-        ['<C-y>'] = cmp.mapping.confirm({select = true}),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-Space>'] = cmp.mapping.complete(),
-    })
+    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<C-Space>'] = cmp.mapping.complete(),
+})
 
 -- (Optional) Configure lua language server for neovim
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
@@ -19,8 +19,9 @@ lsp.set_sign_icons({
 })
 
 lsp.on_attach(function(client, bufnr)
-    local opts = {buffer = bufnr, remap = false}
-    lsp.default_keymaps({buffer = bufnr})
+    local opts = { buffer = bufnr, remap = false }
+    lsp.default_keymaps({ buffer = bufnr })
+    lsp.buffer_autoformat()
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
