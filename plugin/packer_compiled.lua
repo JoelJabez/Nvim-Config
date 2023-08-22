@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/home/joeljabez/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
-  ["nvim-ts-rainbow2"] = {
-    loaded = true,
-    path = "/home/joeljabez/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow2",
-    url = "https://github.com/HiPhish/nvim-ts-rainbow2"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/joeljabez/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/joeljabez/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  ["rainbow-delimiters.nvim"] = {
+    loaded = true,
+    path = "/home/joeljabez/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
+    url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
   },
   ["staline.nvim"] = {
     loaded = true,

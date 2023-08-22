@@ -7,15 +7,15 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('wbthomason/packer.nvim')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('tamton-aquib/staline.nvim')
     use('mfussenegger/nvim-jdtls')
     use('ThePrimeagen/vim-be-good')
-    use('HiPhish/nvim-ts-rainbow2')
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('HiPhish/rainbow-delimiters.nvim')
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
